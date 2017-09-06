@@ -30,9 +30,12 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "fusioncharts": "^3.12.1",
     "object-assign": "4.1.1",
     "react": "15.6.1",
     "react-dom": "15.6.1",
+    "react-fusioncharts": "^1.0.4",
     "react-redux": "5.0.6",
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",

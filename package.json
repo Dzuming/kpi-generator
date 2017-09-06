@@ -32,6 +32,7 @@
   "dependencies": {
     "object-assign": "4.1.1",
     "react": "15.6.1",
+    "react-chartist": "^0.13.0",
     "react-dom": "15.6.1",
     "react-redux": "5.0.6",
     "react-router": "4.2.0",
@@ -47,9 +48,9 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.8",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",

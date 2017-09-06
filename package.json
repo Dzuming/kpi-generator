@@ -30,7 +30,6 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "fusioncharts": "^3.12.1",
     "object-assign": "4.1.1",
     "react": "15.6.1",
@@ -52,6 +51,7 @@
     "babel-loader": "7.1.2",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.8",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
@@ -131,6 +131,9 @@
         "presets": [
           "env",
           "react-hmre"
+        ],
+        "plugins": [
+          "transform-class-properties"
         ]
       },
       "production": {
@@ -150,7 +153,8 @@
         ],
         "plugins": [
           "transform-react-constant-elements",
-          "transform-react-remove-prop-types"
+          "transform-react-remove-prop-types",
+          "transform-class-properties"
         ]
       },
       "test": {

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import KpiBarChart from '../components/Charts/KpiBarChart';
 import KpiPieChart from '../components/Charts/KpiPieChart';
 class Dashboard extends Component {
-  state = {};
   componentDidMount() {}
   componentWillUnmount() {}
   render() {
@@ -40,6 +39,7 @@ class Dashboard extends Component {
     ];
     return (
       <div>
+    <h1>Dashboard</h1>
     <KpiBarChart
       data={barData}
       title="Bar Chart"

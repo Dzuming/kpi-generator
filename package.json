@@ -30,6 +30,11 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "d3-axis": "^1.0.8",
+    "d3-interpolate": "^1.1.5",
+    "d3-scale": "^1.0.6",
+    "d3-selection": "^1.1.0",
+    "d3v4": "^4.2.2",
     "object-assign": "4.1.1",
     "react": "15.6.1",
     "react-chartist": "^0.13.0",

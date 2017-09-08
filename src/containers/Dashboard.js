@@ -1,58 +1,45 @@
 import React, {Component} from 'react';
-import ChartistGraph from 'react-chartist';
-
+import * as d3 from "d3v4";
 class Dashboard extends Component {
-  state = {}
+  state = {};
+  componentDidMount() {}
+  componentWillUnmount() {}
   render() {
-    let data = {
-      labels: [
-        'W1',
-        'W2',
-        'W3',
-        'W4',
-        'W5',
-        'W6',
-        'W7',
-        'W8',
-        'W9',
-        'W10'
-      ],
-      series: [
-        [
-          1,
-          2,
-          4,
-          8,
-          6,
-          -2,
-          -1,
-          -4,
-          -6,
-          -2
-        ]
-      ]
-    };
-
-    let options = {
-      high: 10,
-      low: -10,
-      axisX: {
-        labelInterpolationFnc: function (value, index) {
-          return index % 2 === 0
-            ? value
-            : null;
-        }
+    let jsonCircles = [
+      {
+        "x_axis": 30,
+        "y_axis": 30,
+        "radius": 20,
+        "color": "green"
+      }, {
+        "x_axis": 70,
+        "y_axis": 70,
+        "radius": 20,
+        "color": "purple"
+      }, {
+        "x_axis": 110,
+        "y_axis": 100,
+        "radius": 20,
+        "color": "red"
       }
-    };
-
-    let type = 'Bar';
-
+    ];
     return (
-      <div>
-        <ChartistGraph data={data} options={options} type={type}/>
-      </div>
-    )
+      <svg width={this.props.width} height={this.props.height}>
+        {jsonCircles.map((circle, index) => <circle
+          key={index}
+          cx={circle.x_axis}
+          cy={circle.y_axis}
+          r={circle.radius}
+          fill={circle.color}/>)}
+
+      </svg>
+    );
   }
 }
+Dashboard.defaultProps = {
+  width: 300,
+  height: 300,
+  forceStrength: -10
+};
 
 export default Dashboard;

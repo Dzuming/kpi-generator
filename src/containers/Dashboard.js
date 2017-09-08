@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BarChart} from 'react-d3';
+import KpiBarChart from '../components/Charts/KpiBarChart';
 class Dashboard extends Component {
   state = {};
   componentDidMount() {}
@@ -32,11 +32,8 @@ class Dashboard extends Component {
         ]
       }
     ];
-    return (<BarChart
+    return (<KpiBarChart
       data={barData}
-      width={500}
-      height={200}
-      fill={'#9AC361'}
       title="Bar Chart"
       yAxisLabel="Label"
       xAxisLabel="Value"/>);

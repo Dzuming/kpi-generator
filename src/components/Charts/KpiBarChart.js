@@ -15,9 +15,9 @@ const KpiBarChart = ({data, title, yAxisLabel, xAxisLabel}) => (
     </div>
 );
 KpiBarChart.propTypes = {
-    data: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    yAxisLabel: PropTypes.string.isRequired,
-    xAxisLabel: PropTypes.string.isRequired
+    data: PropTypes.array,
+    title: PropTypes.string,
+    yAxisLabel: PropTypes.string,
+    xAxisLabel: PropTypes.string
 };
 export default KpiBarChart;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import KpiBarChart from '../components/Charts/KpiBarChart';
+import KpiPieChart from '../components/Charts/KpiPieChart';
 class Dashboard extends Component {
   state = {};
   componentDidMount() {}
@@ -32,11 +33,21 @@ class Dashboard extends Component {
         ]
       }
     ];
-    return (<KpiBarChart
+    let pieData = [
+      {label: 'Margarita', value: 20.0},
+      {label: 'John', value: 55.0},
+      {label: 'Tim', value: 25.0 }
+    ];
+    return (
+      <div>
+    <KpiBarChart
       data={barData}
       title="Bar Chart"
       yAxisLabel="Label"
-      xAxisLabel="Value"/>);
+      xAxisLabel="Value"/>
+      <KpiPieChart data={pieData} title="Pie Chart"/>
+      </div>
+      );
   }
 }
 

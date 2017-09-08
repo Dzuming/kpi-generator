@@ -1,45 +1,46 @@
 import React, {Component} from 'react';
-import * as d3 from "d3v4";
+import {BarChart} from 'react-d3';
 class Dashboard extends Component {
   state = {};
   componentDidMount() {}
   componentWillUnmount() {}
   render() {
-    let jsonCircles = [
+    let barData = [
       {
-        "x_axis": 30,
-        "y_axis": 30,
-        "radius": 20,
-        "color": "green"
+        "name": "Series A",
+        "values": [
+          {
+            "x": '23-03-2017',
+            "y": 33
+          },
+          {
+            "x": 2,
+            "y": 33
+          },
+        ]
       }, {
-        "x_axis": 70,
-        "y_axis": 70,
-        "radius": 20,
-        "color": "purple"
-      }, {
-        "x_axis": 110,
-        "y_axis": 100,
-        "radius": 20,
-        "color": "red"
+        "name": "Series B",
+        "values": [
+          {
+            "x": '23-03-2017',
+            "y": 44
+          },
+          {
+            "x": 2,
+            "y": 44
+          }
+        ]
       }
     ];
-    return (
-      <svg width={this.props.width} height={this.props.height}>
-        {jsonCircles.map((circle, index) => <circle
-          key={index}
-          cx={circle.x_axis}
-          cy={circle.y_axis}
-          r={circle.radius}
-          fill={circle.color}/>)}
-
-      </svg>
-    );
+    return (<BarChart
+      data={barData}
+      width={500}
+      height={200}
+      fill={'#9AC361'}
+      title="Bar Chart"
+      yAxisLabel="Label"
+      xAxisLabel="Value"/>);
   }
 }
-Dashboard.defaultProps = {
-  width: 300,
-  height: 300,
-  forceStrength: -10
-};
 
 export default Dashboard;

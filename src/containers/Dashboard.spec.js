@@ -2,6 +2,11 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import Dashboard from './Dashboard';
 describe('<Dashboard />', () => {
+  it('should render', () => {
+    const wrapper = shallow(<Dashboard/>);
+    expect(wrapper.exists()).toBe(true);
+  });
+
   it('should have  h1 element with text', () => {
     const wrapper = shallow(<Dashboard/>);
     const actual = wrapper
